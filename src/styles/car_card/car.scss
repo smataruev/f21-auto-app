@@ -1,0 +1,54 @@
+@import "../adaptive/mixins";
+.card {
+  width: 750px;
+  padding: 25px 75px 25px 25px;
+  min-height: 150px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  box-shadow: 2px 2px 6px 0 rgba(115, 115, 115, 0.5);
+
+  &__image {
+    width: 100%;
+
+  }
+
+  &__title {
+  }
+
+  &__item {
+  }
+
+  &__price {
+  }
+
+  &__year {
+  }
+
+  &__miles {
+  }
+
+  &__used {
+    color: red;
+  }
+  &__id{
+    color: red;
+  }
+}
+.card_block_image{
+  width: 35%;
+}
+.card_img_wrap{
+  width: 100%;
+}
+
+.card_block_main_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card_block_secondary_info{
+  @extend .card_block_main_info;
+}

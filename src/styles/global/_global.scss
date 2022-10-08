@@ -1,0 +1,15 @@
+@use "../app/container";
+
+// LEFT SIDE
+@use "../app/left_side";
+@use "../app/left_top";
+@use "../app/left_middle";
+@use "../app/left_bottom";
+
+// RIGHT SIDE
+@use "../app/right_side";
+
+
+// CAR
+@use "../car_card/car";
+

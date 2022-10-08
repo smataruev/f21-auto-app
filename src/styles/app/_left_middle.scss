@@ -1,0 +1,252 @@
+.left_middle {
+  margin-top: 100px;
+  width: 90%;
+  height: 300px;
+  background-color: #ffffff;
+}
+
+.parent_controls{
+  width: 100%;
+  height: 100%;
+}
+
+.tabs{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__item{
+    background-color: #fff;
+    color: #1e5a9c;
+    text-align: center;
+    width: 100%;
+    padding: 20px 50px;
+    border-right: 1px solid #1e5a9c ;
+    border-bottom: 1px solid #1e5a9c ;
+  }
+  //&__item:hover {
+  //  border-bottom: none;
+  //  background-color: #1e5a9c;
+  //  color: #fff;
+  //}
+  &__item:last-child{
+    border-left: none;
+  }
+  &__item--active{
+    color: red;
+  }
+}
+
+.controls_content {
+  height: 100%;
+  &_moto {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-left: 1px solid #1e5a9c;
+    border-right: 1px solid #1e5a9c;
+    border-bottom: 1px solid #1e5a9c;
+  }
+
+  &_auto {
+    @extend .controls_content_moto;
+  }
+}
+
+.moto {
+  display: none;
+}
+
+.active{
+    border-bottom: none;
+    background-color: #1e5a9c;
+    color: #fff;
+}
+
+
+// FOR CONTENT AUTO
+.auto_brand_select{
+
+}
+form.auto {
+  width: 100%;
+  height: 100%;
+  //background-color: #a89898;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.auto_brand_select{
+  width: 48%;
+  height: 50px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  outline: 1px solid #8fbffa;
+  border-radius: 5px;
+  background-color: #d9ebff;
+  color: #515151;
+  font-weight: 600;
+}
+.auto_model_select{
+  @extend .auto_brand_select;
+}
+.auto_year_select{
+  @extend .auto_brand_select;
+}
+.auto_price_select{
+  @extend .auto_brand_select;
+}
+.auto_newOrUsed {
+  width: 96%;
+  //background-color: #ed5252;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  position: relative;
+}
+//
+.radio_new{
+  width: 17px;
+  height: 17px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 80%;
+}
+.radio_used{
+  width: 17px;
+  height: 17px;
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  right: 80%;
+}
+.label_new{
+  color: #515151;
+}
+.label_used{
+  @extend .label_new;
+}
+
+.auto_submit{
+  width: 96%;
+  position: relative;
+
+  &__find {
+    padding: 10px 30px;
+    border: none;
+    background-color: #1e5a9c;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color .2s ease-in-out;
+  }
+  &__find:hover{
+    background-color: #2673c8;
+    cursor: pointer;
+  }
+}
+
+input[type='text'] {
+  width: 100%;
+}
+// FILE UPLOAD FORM
+.file_upload_wrap {
+  width: 80%;
+  position: relative;
+  top: 150px;
+  border: 1px solid #3d5dc3;
+}
+.file_upload {
+  width: 100%;
+  @extend .auto;
+
+
+  &__brand {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &__model {
+    @extend .file_upload__brand;
+  }
+
+  &__year {
+    @extend .file_upload__brand;
+  }
+
+  &__price {
+    @extend .file_upload__brand;
+  }
+
+  &__miles {
+    @extend .file_upload__brand;
+  }
+
+  &__newCar {
+    margin: 0;
+    width: 100px;
+    @extend .file_upload__brand;
+  }
+  &__usedCar {
+    width: 100px;
+    @extend .file_upload__brand;
+  }
+
+  &__post_date {
+    @extend .file_upload__brand;
+  }
+
+  &__imageUrl {
+    @extend .file_upload__brand;
+  }
+}
+
+
+// ---- UPLOAD BLOCK
+
+.auto_brand_select_upload {
+  @extend  .auto_brand_select;
+  height: 40px;
+  width: 100%;
+}
+.auto_model_select_upload{
+  @extend .auto_brand_select_upload
+}
+.auto_year_select_upload{
+  @extend  .auto_brand_select_upload
+}
+.auto_price_upload {
+  width: 97% !important;
+  height: 30px;
+  border: 2px solid #1e5a9c;
+  border-radius: 5px;
+  background-color: #d9ebfe;
+  color: #353535;
+}
+.auto_price_upload:focus {
+  border: 2px solid #d9ebfe !important;
+}
+.auto_miles_upload {
+  @extend .auto_price_upload;
+}
+.auto_newOrUsed_wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center !important;
+  width: 100%;
+  height: 50px;
+}
+
+.auto_file_upload{}
+.auto_submit_upload{
+  @extend .auto_submit__find;
+  right: 15px;
+}
+

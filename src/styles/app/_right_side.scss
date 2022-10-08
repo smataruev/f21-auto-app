@@ -1,0 +1,31 @@
+@import "../adaptive/mixins";
+
+.right_side {
+  padding-top: 50px;
+  width: 70%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: all .3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include pc{
+    background-color: #3d5dc3;
+  }
+  @include laptop{
+    background-color: #98aae3;
+  }
+  @include tablet{
+    background-color: #eaef44;
+  }
+  @include phones{
+    background-color: #f3f692;
+  }
+}
+.imgSrc {
+  width: 500px;
+}
