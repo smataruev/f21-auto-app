@@ -1,0 +1,20 @@
+mixin car (imageName, brand, model, year, price, new_used, mileage, id)
+	.card
+		.card_block_image
+			.card_img_wrap
+				img(src=require(`../src/images/${imageName}`) alt='').card__image
+		.card_block_main_info
+			p.card__title= brand
+			p.card__model= model
+			p.card__year= year
+			p.card__price= price
+		.card_block_secondary_info
+			p.card__used= new_used
+			p.card__miles= mileage
+			p.card__id= id
+
+
+
+
+mixin close_btn()
+	.close_btn

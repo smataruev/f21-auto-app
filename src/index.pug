@@ -1,0 +1,58 @@
+extends pug/template
+include pug/mixins
+include pug/left_side_file_upload
+
+block body
+	body
+		.container
+			.left_side
+				+close_btn()
+				.left_top
+					h1 AUTO RU
+				.left_middle
+					.parent_controls
+						ul.tabs
+							li.tabs__item(data-tab='.moto') MOTO
+							li.tabs__item(class='active' data-tab='.auto') AUTO
+						.controls_content
+							.controls_content_moto(class='moto') CONTENT MOTO
+								//form.moto
+							.controls_content_auto(class='auto')
+								form.auto
+										select(class='auto_brand_select')
+											option(value='1')
+											option(value='2') BMW
+											option(value='3') Mercedes-Benz
+											option(value='4') Honda
+										select(class='auto_model_select')
+											option(value='1')
+										select(class='auto_year_select')
+											option(value='1')
+											option(value='2') 2020
+											option(value='3') 2021
+											option(value='4') 2022
+										select(class='auto_price_select')
+											option(value='1')
+											option(value='2') 50000
+											option(value='3') 60000
+											option(value='4') 70000
+											option(value='5') 80000
+											option(value='6') 90000
+											option(value='7') 100000
+										.auto_newOrUsed
+											label(for='new' class='label_new') new
+												input(type='radio' class='radio_new' id='new' name='newOrUsed' value='new')
+											br
+											label(for='used' class='label_used') used
+												input(type='radio' class='radio_used' id='used' name='newOrUsed' value='used')
+										.auto_submit
+											input(type='submit' value='find' class='auto_submit__find')
+
+				+fileUpload()
+
+			.right_side
+				//+car('bmw5.jpg', 'BMW', '5 Series', '2020year', '50000$', 'used', '14000mil', 100043)
+				//+car('bmw7.jpeg', 'BMW', '5 Series', '2020year', '50000$', 'used', '14000mil', 100043)
+				//+car('mers_e.jpg', 'BMW', '5 Series', '2020year', '50000$', 'used', '14000mil', 100043)
+				//+car('mers_s.jpg', 'BMW', '5 Series', '2020year', '50000$', 'used', '14000mil', 100043)
+				//img(src='https://i.ytimg.com/vi/BxPqENlMGyc/maxresdefault.jpg').imgSrc

@@ -1,0 +1,42 @@
+mixin fileUpload()
+	.file_upload_wrap
+		form.file_upload
+			.file_upload__brand
+				//input(type='text' name='file_brand' placeholder="brand")
+				select(class='auto_brand_select_upload')
+					option(value='1')
+					option(value='2') BMW
+					option(value='3') Mercedes-Benz
+					option(value='4') Honda
+			.file_upload__model
+				//input(type='text' name='file_model' placeholder="model")
+				select(class='auto_model_select_upload')
+					option(value='1')
+					option(value='2') 5 Series
+					option(value='3') 7 Series
+					option(value='4') E Class
+					option(value='5') S Class
+			.file_upload__year
+				//input(type='text' name='file_year' placeholder="year")
+				select(class='auto_year_select_upload')
+					option(value='1')
+					option(value='2') 2020
+					option(value='3') 2021
+					option(value='4') 2022
+			.file_upload__price
+				input(type='text' class='auto_price_upload'  name='file_price' placeholder="price")
+			.file_upload__miles
+				input(type='text' class='auto_miles_upload' name='file_miles' placeholder="miles")
+			.auto_newOrUsed_wrap
+				.file_upload__newCar
+					label new
+						input(type='radio' name='file_newCar' value='new')
+				.file_upload__userCar
+					label used
+						input(type='radio' name='file_newCar' value='used')
+			.file_upload__imageUrl
+				input(type='file' class='auto_file_upload'  accept="image/*" name='file_imageUrl' ).file_image
+			.file_submit
+				input(type='submit', class='auto_submit_upload' name='form_image_send' value='send')
+
+
